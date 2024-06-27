@@ -1,8 +1,8 @@
 package org.example;
 
-import java.util.ArrayList;
-import java.util.List;
+import lombok.Data;
 
+@Data
 public class Human {
     private Cat cat;
     private Dog dog;
