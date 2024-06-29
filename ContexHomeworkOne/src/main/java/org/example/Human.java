@@ -1,8 +1,10 @@
 package org.example;
 
-import java.util.ArrayList;
-import java.util.List;
+import lombok.AllArgsConstructor;
+import lombok.Data;
 
+@Data
+@AllArgsConstructor
 public class Human {
     private Cat cat;
     private Dog dog;
