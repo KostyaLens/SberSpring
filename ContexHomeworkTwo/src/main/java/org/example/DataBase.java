@@ -4,12 +4,13 @@ import lombok.Data;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
+
 @Data
 @Component
 public class DataBase {
     private List<String> story;
 
-    void add(String number, int sum){
+    void add(String number, int sum) {
         StringBuilder stringBuilder = new StringBuilder("перевод ");
         stringBuilder.append(sum);
         stringBuilder.append(" на номер ");
