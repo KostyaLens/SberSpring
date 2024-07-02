@@ -11,6 +11,7 @@
     <modules>
         <module>ContexHomeworkOne</module>
         <module>ContexHomeworkTwo</module>
+        <module>Aspect</module>
     </modules>
     <dependencies>
         <dependency>
