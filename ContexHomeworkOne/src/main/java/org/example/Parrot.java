@@ -5,6 +5,6 @@ import lombok.Data;
 
 @Data
 @AllArgsConstructor
-public class Parrot implements Pet{
+public class Parrot implements Pet {
     private String name;
 }
