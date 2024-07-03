@@ -12,6 +12,7 @@
         <module>ContexHomeworkOne</module>
         <module>ContexHomeworkTwo</module>
         <module>Aspect</module>
+        <module>Aspects</module>
     </modules>
     <dependencies>
         <dependency>
@@ -32,7 +33,11 @@
             <artifactId>spring-context</artifactId>
             <version>6.1.10</version>
         </dependency>
-
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aspects</artifactId>
+            <version>6.1.10</version>
+        </dependency>
 
         <dependency>
             <groupId>junit</groupId>
