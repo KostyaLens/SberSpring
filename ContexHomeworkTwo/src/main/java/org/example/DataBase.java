@@ -10,7 +10,7 @@ import java.util.List;
 public class DataBase {
     private List<String> story;
 
-    void add(String number, int sum) {
+    public void add(String number, int sum) {
         StringBuilder stringBuilder = new StringBuilder("перевод ");
         stringBuilder.append(sum);
         stringBuilder.append(" на номер ");

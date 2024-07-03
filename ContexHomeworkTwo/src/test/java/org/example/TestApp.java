@@ -6,8 +6,8 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 public class TestApp {
 
-    AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(Config.class);
-    App app = context.getBean(App.class);
+    private AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(Config.class);
+    private App app = context.getBean(App.class);
     @Test
     public void testBankClientsApp() throws NoClientsException {
         app.getBankClientsApp().setClient(true);
