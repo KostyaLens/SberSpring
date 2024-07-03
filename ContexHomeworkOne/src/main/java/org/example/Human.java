@@ -8,11 +8,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 @AllArgsConstructor
 public class Human {
     @Autowired
-    private Cat cat;
+    private Pet cat;
     @Autowired
-    private Dog dog;
+    private Pet dog;
     @Autowired
-    private Parrot parrot;
+    private Pet parrot;
     @Autowired
-    private Parrot parrot1;
+    private Pet parrot1;
 }
