@@ -4,15 +4,100 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="48b513b9-b996-4b76-a9c9-621ed37500a0" name="Changes" comment="sed" />
+    <list default="true" id="48b513b9-b996-4b76-a9c9-621ed37500a0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Rest/src/main/java/org/example/controllers/BasketController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rest/src/main/java/org/example/controllers/ClientController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rest/src/main/java/org/example/controllers/ProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rest/src/main/java/org/example/emptity/Basket.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rest/src/main/java/org/example/emptity/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rest/src/main/java/org/example/emptity/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rest/src/main/java/org/example/repository/BasketRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rest/src/main/java/org/example/repository/ClientRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rest/src/main/java/org/example/repository/ProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rest/src/main/java/org/example/services/BasketService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rest/src/main/java/org/example/services/ClientService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rest/src/main/java/org/example/services/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rest/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ContexHomeworkOne/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ContexHomeworkOne/src/main/java/org/example/Dog.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ContexHomeworkOne/src/main/java/org/example/Human.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ContexHomeworkOne/src/main/java/org/example/Parrot.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ContexHomeworkOne/src/main/java/org/example/Pet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ContexHomeworkTwo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Rest/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ContexHomeworkTwo/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Rest/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="workspaceImportEnabled" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2j3i0PIbi0HqANhzXefNCOpBGQO" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;19&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/artem/Desktop/Spring&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="48b513b9-b996-4b76-a9c9-621ed37500a0" name="Changes" comment="" />
+      <created>1720623541508</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1720623541508</updated>
+    </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="sed" />
