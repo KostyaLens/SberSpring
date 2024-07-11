@@ -1,5 +1,7 @@
 package org.example.repository;
 
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import org.example.emptity.Basket;
 import org.example.emptity.Product;
 import org.springframework.stereotype.Repository;
@@ -7,6 +9,8 @@ import org.springframework.stereotype.Repository;
 import java.util.ArrayList;
 import java.util.List;
 @Repository
+@AllArgsConstructor
+@NoArgsConstructor
 public class BasketRepository {
     private List<Basket> basketList = new ArrayList<Basket>();
     private long id = -1;

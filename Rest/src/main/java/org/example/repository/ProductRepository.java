@@ -1,5 +1,7 @@
 package org.example.repository;
 
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import org.example.emptity.Client;
 import org.example.emptity.Product;
 import org.springframework.stereotype.Repository;
@@ -9,6 +11,8 @@ import java.util.List;
 import java.util.Optional;
 
 @Repository
+@AllArgsConstructor
+@NoArgsConstructor
 public class ProductRepository {
     private List<Product> productList = new ArrayList<Product>();
     private long id = -1;
