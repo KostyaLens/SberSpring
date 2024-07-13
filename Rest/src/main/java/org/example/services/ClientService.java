@@ -17,7 +17,7 @@ public class ClientService {
     private ClientRepository clientRepository;
 
     public Client saveClient(Client client){
-        if(clientRepository.isClient(client) == null){
+        if(!clientRepository.isClient(client)){
             return null;
         }
         clientRepository.singClient(client);

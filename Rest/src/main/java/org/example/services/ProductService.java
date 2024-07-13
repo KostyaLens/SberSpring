@@ -20,7 +20,7 @@ public class ProductService {
     }
 
     public Product searchProduct(long id){
-        return productRepository.search(id);
+        return productRepository.searchProduct(id);
     }
 
     public List<Product> searchProductByName(String name){

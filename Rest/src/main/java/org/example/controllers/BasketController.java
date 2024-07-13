@@ -11,8 +11,8 @@ public class BasketController {
     @Autowired
     private BasketService basketService;
     @PostMapping("/add")
-    public void addProductToBasket(@PathVariable Product product, @PathVariable long idBasket){
-       basketService.addProductInBasket(product, idBasket);
+    public void addProductToBasket(@PathVariable long idProduct, @PathVariable long idBasket){
+       basketService.addProductInBasket(idProduct, idBasket);
     }
 
     @DeleteMapping("/delete")

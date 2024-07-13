@@ -2,33 +2,61 @@ package org.example.repository;
 
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
-import org.example.emptity.Basket;
-import org.example.emptity.Product;
 import org.springframework.stereotype.Repository;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.sql.*;
+
 @Repository
-@AllArgsConstructor
-@NoArgsConstructor
 public class BasketRepository {
-    private List<Basket> basketList = new ArrayList<Basket>();
-    private long id = -1;
+    private static final String JDBCUrl = "jdbc:h2:mem:testdb";
 
-    private void createBasket(){
-        Basket basket = new Basket(id++, new ArrayList<>(), "");
-        basketList.add(basket);
-    }
+    private static final String insertSql = "INSERT INTO baskets (promocode) VALUES (?);";
+    private static final String addSql = "INSERT INTO products_baskets (id_product, id_basket, quantity) VALUES(?, ?, ?);";
+    private static final String delete = "DELETE FROM products_bins where (id_product = ? AND id_basket = ?)";
+    private int createBasket(){
+        try (Connection connection = DriverManager.getConnection(JDBCUrl);
+             PreparedStatement prepareStatement = connection.prepareStatement(insertSql, Statement.RETURN_GENERATED_KEYS)) {
+            prepareStatement.setString(1, "");
 
-    public void addProductInBasket(Product product, long idBasket){
-        if (idBasket >= id){
-            createBasket();
+            prepareStatement.executeUpdate();
+            ResultSet rs = prepareStatement.getGeneratedKeys();
+            if (rs.next()) {
+                return rs.getInt(1);
+            } else {
+                throw new RuntimeException("Ошибка при получении идентификатора");
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
         }
-        basketList.get((int) idBasket).getProductList().add(product);
     }
 
+    public int add(long idProduct, long idBasket) {
+        try (Connection connection = DriverManager.getConnection(JDBCUrl);
+             PreparedStatement prepareStatement = connection.prepareStatement(addSql, Statement.RETURN_GENERATED_KEYS)) {
+            prepareStatement.setInt(1, (int) idProduct);
+            prepareStatement.setInt(2, (int) idBasket);
+            prepareStatement.setInt(3, 1);
+            prepareStatement.executeUpdate();
+            ResultSet rs = prepareStatement.getGeneratedKeys();
+            if (rs.next()) {
+                return rs.getInt(1);
+            } else {
+                throw new RuntimeException("Ошибка при получении идентификатора");
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
-    public void deleteProductFromBasket(long idBasket, long idProduct){
-        basketList.get((int) idBasket).getProductList().removeIf(p -> p.getId() == id);
+    public boolean deleteProductFromBasket(long binId, long productId) {
+        try (Connection connection = DriverManager.getConnection(JDBCUrl);
+             PreparedStatement prepareStatement = connection.prepareStatement(delete)) {
+            prepareStatement.setInt(1, (int) productId);
+            prepareStatement.setInt(2, (int) binId);
+            int rows = prepareStatement.executeUpdate();
+            return rows > 0;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

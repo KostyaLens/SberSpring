@@ -19,8 +19,8 @@ public class BasketService {
     @Autowired
     private BasketRepository basketRepository;
 
-    public void addProductInBasket(Product product, long idBasket){
-        basketRepository.addProductInBasket(product, idBasket);
+    public void addProductInBasket(long idProduct, long idBasket){
+        basketRepository.add(idProduct, idBasket);
     }
     public void deleteProductFromBasket(long idBasket, long idProduct){
         basketRepository.deleteProductFromBasket(idBasket, idProduct);

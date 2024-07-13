@@ -17,7 +17,7 @@ import java.util.Optional;
 public class ClientController {
     @Autowired
     private ClientService clientService;
-    @PostMapping
+    @PostMapping()
     public ResponseEntity<String> clientReg(@RequestBody Client client) throws URISyntaxException {
         Client client1 = clientService.saveClient(client);
         if (client1 != null) {

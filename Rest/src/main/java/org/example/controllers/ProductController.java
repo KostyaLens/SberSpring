@@ -17,7 +17,7 @@ public class ProductController {
     @Autowired
     private ProductService productService;
 
-    @PostMapping
+    @PostMapping()
     public ResponseEntity<String> productCreate(@RequestBody Product product) throws URISyntaxException {
         return ResponseEntity.created(new URI("http://localhost:8080/product/" + productService.saveProduct(product))).build();
     }
