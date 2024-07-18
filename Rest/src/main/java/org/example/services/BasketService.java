@@ -10,12 +10,15 @@ import org.example.repository.ClientRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.sql.SQLException;
 import java.util.Optional;
 
 @Service
 @AllArgsConstructor
 @NoArgsConstructor
 public class BasketService {
+
+    private int id = -1;
     @Autowired
     private BasketRepository basketRepository;
 
@@ -24,5 +27,8 @@ public class BasketService {
     }
     public void deleteProductFromBasket(long idBasket, long idProduct){
         basketRepository.deleteProductFromBasket(idBasket, idProduct);
+    }
+    public int addId(){
+        return this.id++;
     }
 }

@@ -1,6 +1,7 @@
 package org.example.controllers;
 
 import org.example.emptity.Client;
+import org.example.services.BasketService;
 import org.example.services.ClientService;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,9 +18,11 @@ import java.util.Optional;
 public class ClientController {
     @Autowired
     private ClientService clientService;
+    @Autowired
+    private BasketService basketService;
     @PostMapping()
     public ResponseEntity<String> clientReg(@RequestBody Client client) throws URISyntaxException {
-        Client client1 = clientService.saveClient(client);
+        Client client1 = clientService.saveClient(client, basketService.addId());
         if (client1 != null) {
             return ResponseEntity.created(new URI("http://localhost:8080/client/" + client1)).build();
         }

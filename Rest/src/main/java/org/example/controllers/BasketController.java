@@ -5,6 +5,8 @@ import org.example.services.BasketService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.sql.SQLException;
+
 @RestController
 @RequestMapping("Basket")
 public class BasketController {

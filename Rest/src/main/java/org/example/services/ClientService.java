@@ -16,11 +16,11 @@ public class ClientService {
     @Autowired
     private ClientRepository clientRepository;
 
-    public Client saveClient(Client client){
+    public Client saveClient(Client client, int id){
         if(!clientRepository.isClient(client)){
             return null;
         }
-        clientRepository.singClient(client);
+        clientRepository.singClient(client, id);
         return client;
     }
 

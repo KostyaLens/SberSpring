@@ -13,8 +13,8 @@ import java.util.Optional;
 
 @Repository
 public class ProductRepository {
-    private static final String JDBCUrl = "jdbc:h2:mem:testdb";
-    private static final String insert = "INSERT INTO products (name_product, value_product, quantity) VALUES(?, ?, ?);";
+    private static final String JDBCUrl = "jdbc:postgresql://localhost:5432/postgres?currentSchema=my_schema&user=postgres&password=lens07gada";
+    private static final String insert = "INSERT INTO products (name_product, price_product, quantity) VALUES(?, ?, ?);";
     private static final String findById = "SELECT * FROM products where id_product = ?";
 
     private static final String delete = "DELETE FROM products where id_product = ?";

@@ -8,18 +8,16 @@ import java.sql.*;
 
 @Repository
 public class BasketRepository {
-    private static final String JDBCUrl = "jdbc:h2:mem:testdb";
-
+    private static final String JDBCUrl = "jdbc:postgresql://localhost:5432/postgres?currentSchema=my_schema&user=postgres&password=lens07gada";
     private static final String insertSql = "INSERT INTO baskets (promocode) VALUES (?);";
-    private static final String addSql = "INSERT INTO products_baskets (id_product, id_basket, quantity) VALUES(?, ?, ?);";
-    private static final String delete = "DELETE FROM products_bins where (id_product = ? AND id_basket = ?)";
+    private static final String addSql = "INSERT INTO products_carts (id_cart, id_product, quantity) VALUES (?,?,?);";
+    private static final String delete = "DELETE FROM products_carts where (id_product = ? AND id_cart = ?)";
     private int createBasket(){
         try (Connection connection = DriverManager.getConnection(JDBCUrl);
-             PreparedStatement prepareStatement = connection.prepareStatement(insertSql, Statement.RETURN_GENERATED_KEYS)) {
-            prepareStatement.setString(1, "");
-
-            prepareStatement.executeUpdate();
-            ResultSet rs = prepareStatement.getGeneratedKeys();
+            PreparedStatement preparedStatement = connection.prepareStatement(insertSql, Statement.RETURN_GENERATED_KEYS)) {
+            preparedStatement.setString(1, "");
+            preparedStatement.executeUpdate();
+            ResultSet rs = preparedStatement.getGeneratedKeys();
             if (rs.next()) {
                 return rs.getInt(1);
             } else {

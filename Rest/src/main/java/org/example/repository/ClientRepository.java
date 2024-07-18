@@ -10,17 +10,19 @@ import java.util.Optional;
 
 @Repository
 public class ClientRepository {
-    private static final String JDBCUrl = "jdbc:h2:mem:testdb";
-    private static final String insert = "INSERT INTO clients (promocode) VALUES (?);";
+    private static final String JDBCUrl ="jdbc:postgresql://localhost:5432/postgres?currentSchema=my_schema&user=postgres&password=lens07gada";
+    private static final String insert = "INSERT clients (name_clients, username, password, email, basket_id) VALUES (?,?,?,?,?);";
     private static final String findById = "SELECT * FROM clients where id_client = ?";
-    private static final String findByLogin = "SELECT * FROM clients where login_client = ?";
-    public int singClient(Client client){
+    private static final String findByLogin = "SELECT * FROM clients where username = ?";
+
+    public int singClient(Client client, int basketID){
         try (Connection connection = DriverManager.getConnection(JDBCUrl);
              PreparedStatement prepareStatement = connection.prepareStatement(insert, Statement.RETURN_GENERATED_KEYS)) {
             prepareStatement.setString(1, client.getName());
             prepareStatement.setString(2, client.getLogin());
             prepareStatement.setString(3, client.getPassword());
             prepareStatement.setString(4, client.getEmail());
+            prepareStatement.setInt(5, basketID);
             prepareStatement.executeUpdate();
             ResultSet rs = prepareStatement.getGeneratedKeys();
             if (rs.next()) {
@@ -44,7 +46,8 @@ public class ClientRepository {
                 String login = resultSet.getString("login_client");
                 String password = resultSet.getString("password_client");
                 String email = resultSet.getString("email");
-                Client client = new Client(returnId, name, login, password, email);
+                int basketId = resultSet.getInt("basket_id");
+                Client client = new Client(returnId, name, login, password, email, basketId);
                 return Optional.of(client);
             }
             return Optional.empty();
@@ -63,4 +66,5 @@ public class ClientRepository {
             throw new RuntimeException(e);
         }
     }
+
 }

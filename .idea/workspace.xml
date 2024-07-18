@@ -4,16 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="48b513b9-b996-4b76-a9c9-621ed37500a0" name="Changes" comment="получилось">
-      <change afterPath="$PROJECT_DIR$/Rest/src/main/resources/app.yml" afterDir="false" />
+    <list default="true" id="48b513b9-b996-4b76-a9c9-621ed37500a0" name="Changes" comment="сделал jbcd">
+      <change afterPath="$PROJECT_DIR$/Rest/src/main/resources/my_she.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Rest/src/main/java/org/example/controllers/BasketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Rest/src/main/java/org/example/controllers/BasketController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rest/src/main/java/org/example/controllers/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Rest/src/main/java/org/example/controllers/ClientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rest/src/main/java/org/example/emptity/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/Rest/src/main/java/org/example/emptity/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Rest/src/main/java/org/example/repository/BasketRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Rest/src/main/java/org/example/repository/BasketRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Rest/src/main/java/org/example/repository/ClientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Rest/src/main/java/org/example/repository/ClientRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Rest/src/main/java/org/example/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Rest/src/main/java/org/example/repository/ProductRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Rest/src/main/java/org/example/services/BasketService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Rest/src/main/java/org/example/services/BasketService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Rest/src/main/java/org/example/services/ClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Rest/src/main/java/org/example/services/ClientService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rest/src/main/java/org/example/services/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Rest/src/main/java/org/example/services/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rest/src/main/resources/app.yml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,13 +27,14 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="restt" />
+        <entry key="$PROJECT_DIR$" value="rest" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -57,17 +60,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;19&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/artem/Desktop/SpringBoot&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "jdk.selected.JAVA_MODULE": "19",
+    "last_opened_file_path": "C:/Users/artem/Desktop/Spring",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
